@@ -11,6 +11,8 @@
 - banner轮播图
 - 自动轮播
 - 手动轮播
+### 导航栏（jd_nav）
+- [分类查询功能的实现]（https://kingziqiang.github.io/jd_index/list.html）
 ### 倒计时秒杀(main-content)
 - 计时器
 - 临界值的处理
