@@ -1,0 +1,52 @@
+*,
+::before,
+::after{
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	/* 点击高亮效果 *//* 手指点击 清除默认的 高亮效果 透明 */
+	-webkit-top-highlight-color: transparent;
+	-webket-box-sizing: border;
+	box-sizing: border-box;
+	/* 统一设置文字  sans-serif 移动端 的默认字体 */
+	font-family: "微软雅黑",sans-serif;
+}
+/* input标签 去掉默认样式 */
+input{
+	 border: none;
+	 -webkit-appearance:none;
+	 outline-style: none;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.f_l{
+	float: left;
+}
+.f_r{
+	float: right;
+}
+.cliearfix::before,
+.cliearfix::after{
+	content: "";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	width: 0;
+	clear: both;
+}
+.b_l{
+	border-left: 1px solid gray;
+}
+.b_b{
+	border-bottom: 1px solid gray;
+}
+.b_t{
+	border-top: 1px solid gray;
+}
+.b_r{
+	border-right: 1px solid gray;
+}
