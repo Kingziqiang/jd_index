@@ -1,4 +1,4 @@
-# [京东首页(手机端)](https://kingziqiang.github.io/jd_index/)
+# [京东首页(手机端)](https://kingziqiang.github.io/jd_index/index.html)
 ## 主要技术
 1. html,html5
 2. css,css3
