@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+	html,body{
+		height: 100%;
+	}
+	body{
+		background: #eee;
+	}
+	div{
+		height: 100px;
+		width: 100px;
+		background: #f00;
+	}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		var startX = 0;
+
+		// 定义变量 保存 移动的距离
+		var moveX = 0;
+
+		// 定义变量 用来 记录 小div 结束的时候 移动的距离
+		var distanceX = 0;
+
+
+		// 定义 一堆 记录y方向 移动的 值
+		var startY = 0;
+		var moveY = 0;
+		var distanceY =0;
+
+		document.body.addEventListener('touchstart',function(e){
+			// console.log('touchstart');
+			// console.log(e)
+			startX=e.touches[0].clientX;
+			startY=e.touches[0].clientY;
+			
+		});
+		document.body.addEventListener('touchmove',function(e){
+			//console.log('touchstart');
+			//console.log(e)
+			moveX=e.touches[0].clientX-startX;
+			moveY=e.touches[0].clientY-startY;
+			
+			console.log(moveX);
+			document.querySelector("div").style.transform='translate('+(moveX+distanceX)+'px,'+(moveY+distanceY)+'px)';
+			 //document.querySelector("div").style.transform = 'translateX('+(moveX)+'px)';
+		});
+		document.body.addEventListener('touchend',function(e){
+			distanceX+=moveX;
+			distanceY+=moveY;
+			//console.log('touchend');
+			//console.log(e)
+		})
+	}
+</script>
